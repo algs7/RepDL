@@ -15,10 +15,10 @@ setup(
             sources=glob("backend/cpu/*.cpp"),
             extra_compile_args=["-fopenmp"],
         ),
-        cpp_extension.CUDAExtension(
-            name="repdl.backend.cuda",
-            sources=glob("backend/cuda/*.cu") + glob("backend/cuda/*.cpp"),
-        ),
+#        cpp_extension.CUDAExtension(
+#            name="repdl.backend.cuda",
+#            sources=glob("backend/cuda/*.cu") + glob("backend/cuda/*.cpp"),
+#        ),
     ],
     cmdclass={"build_ext": cpp_extension.BuildExtension},
     install_requires=["torch>=1.10.0"],
